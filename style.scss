@@ -1,0 +1,110 @@
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Zen Antique', serif;
+
+$base: #f7f2df;
+$shadow: #e3dccc;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $base;
+  font-family: 'Shippori Mincho', serif;
+}
+
+#top {
+  width: 100vw;
+  height: 100vh;
+
+  position: relative;
+  top: 0%;
+  left: 0%;
+  h1 {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    color: white;
+    font-size: 5rem;
+
+    writing-mode: vertical-rl; //縦書き
+    background-color: transparent; //透明
+  }
+  p {
+    position: absolute;
+    bottom: 80px;
+    color: white;
+    font-size: 3rem;
+    background-color: transparent; //透明
+  }
+  .image {
+    transform-origin: 52% 15%;
+    // transition: transform 10s ease-in-out; /* 3秒かけてズームさせる */
+    // transform: scale(4); /* 画像を1.5倍に拡大する */
+  }
+}
+
+.section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  top: 0%;
+  left: 0%;
+  p {
+    position: absolute;
+     opacity: 0;
+    left: 100px;
+    bottom: 80px;
+    color: white;
+    font-size: 3rem;
+    background-color: transparent; //透明
+    text-shadow: 3px 3px 4px #888888;
+
+  }
+  h1 {
+    position: absolute;
+    opacity: 0;
+    top: 50px;
+    right: 100px;
+    color: white;
+    font-size: 5rem;
+    writing-mode: vertical-rl; //縦書き
+    background-color: transparent; //透明
+    text-shadow: 3px 3px 4px #888888;
+  }
+  .active{
+    transition: opacity 3s; /* 2秒かけて透明度が変化する */
+    opacity: 1;
+  }
+}
+
+
+#scrolltop {
+  position: absolute;
+  background: transparent;
+  text-align: center;
+  text-decoration: none;
+  width: 300px;
+  margin: auto;
+  bottom: 20px;
+  left: calc(50% - 150px);
+
+  padding: 1rem 4rem;
+  font-weight: bold;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  border-radius: 100vh;
+  transition: 0.5s;
+  font-size: 1.5rem;
+  &:hover {
+    color: black;
+    background: #ffffff;
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; //アスペクト比を維持したままコンテンツボックスを埋めつくすように表示
+  overflow: hidden;
+  z-index: -1;
+}
