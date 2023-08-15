@@ -4,34 +4,60 @@
   padding: 0;
   box-sizing: border-box;
   background-color: #f7f2df;
-  font-family: "Shippori Mincho", serif;
+  font-family: "Yuji Syuku", serif;
+}
+
+body {
+  display: flex;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.nav {
+  width: 5vw;
+  height: 100vh;
+  background-color: #000000;
+  transition: all 0.5s;
+}
+.nav h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3rem;
+  padding-top: 20px;
+  writing-mode: vertical-rl;
+  background-color: transparent;
+  transition: opacity 0.5s;
 }
 
 #top {
-  width: 100vw;
-  height: 100vh;
+  width: 95vw;
+  height: 93vh;
   position: relative;
   top: 0%;
   left: 0%;
-}
-#top h1 {
-  position: absolute;
-  top: 50px;
-  right: 100px;
-  color: white;
-  font-size: 5rem;
-  writing-mode: vertical-rl;
-  background-color: transparent;
+  transition: all 0.5s;
 }
 #top p {
   position: absolute;
-  bottom: 80px;
+  transform: translateY(30px);
+  bottom: -10px;
   color: white;
-  font-size: 3rem;
+  font-size: 30px;
   background-color: transparent;
 }
 #top .image {
   transform-origin: 52% 15%;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 .section {
@@ -62,12 +88,15 @@
   background-color: transparent;
   text-shadow: 3px 3px 4px #888888;
 }
+.section h1 {
+  transition: all;
+}
 .section .active {
   transition: opacity 3s; /* 2秒かけて透明度が変化する */
   opacity: 1;
 }
 
-#scrolltop {
+#btnStart {
   position: absolute;
   background: transparent;
   text-align: center;
@@ -75,7 +104,7 @@
   width: 300px;
   margin: auto;
   bottom: 20px;
-  left: calc(50% - 150px);
+  left: calc(50% - 130px);
   padding: 1rem 4rem;
   font-weight: bold;
   border: 2px solid #ffffff;
@@ -83,8 +112,9 @@
   border-radius: 100vh;
   transition: 0.5s;
   font-size: 1.5rem;
+  z-index: 9;
 }
-#scrolltop:hover {
+#btnStart:hover {
   color: black;
   background: #ffffff;
 }
